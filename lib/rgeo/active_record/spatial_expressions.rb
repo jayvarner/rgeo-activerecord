@@ -191,7 +191,7 @@ module RGeo
       # Surface functions
       #++
 
-      def st_area(units = nil)
+      def st_area(units = false)
         args = [self]
         args << units.to_s if units
         SpatialNamedFunction.new("ST_Area", args, [false, true, false])
